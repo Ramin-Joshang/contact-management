@@ -1,0 +1,53 @@
+{
+  "kind": "collectionType",
+  "collectionName": "contacts",
+  "info": {
+    "singularName": "contact",
+    "pluralName": "contacts",
+    "displayName": "contacts",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "email": {
+      "type": "email",
+      "required": true,
+      "unique": true
+    },
+    "phone": {
+      "type": "string",
+      "required": true,
+      "unique": true,
+      "minLength": 11
+    },
+    "image": {
+      "type": "media",
+      "multiple": false,
+      "required": false,
+      "allowedTypes": [
+        "images"
+      ]
+    },
+    "job": {
+      "type": "string",
+      "required": true
+    },
+    "group": {
+      "type": "enumeration",
+      "enum": [
+        "Friend",
+        "Family",
+        "Service"
+      ],
+      "required": true
+    }
+  }
+}
